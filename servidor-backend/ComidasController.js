@@ -50,11 +50,12 @@ const add = (comida) => {
 
 const remove = (id) => {
     getAll().pratosFavoritos = getAll().pratosFavoritos.filter((comida) => {
-        return comida.id !== id;
+        return comida !== id;
     })
 }
 
 module.exports = {
     getAll,
-    add
+    add,
+    remove
 }
